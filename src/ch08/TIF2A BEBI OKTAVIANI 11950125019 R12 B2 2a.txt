@@ -1,0 +1,15 @@
+procedure preBmBc(
+    input P : array[0..n-1] of char,
+    input n : integer,
+    input/output bmBc : array[0..n-1] of integer
+)
+Deklarasi:
+  i: integer
+
+Algoritme:
+  for (i := 0 to ASIZE-1)
+     bmBc[i] := m;
+  endfor
+  for (i := 0 to m - 2)
+     bmBc[P[i]] := m - i - 1;
+  endfor

@@ -1,0 +1,7 @@
+Deklarasi :
+array nilai {82, 12, 41, 38, 19, 26, 9, 48, 20, 55, 8, 32, 3}
+
+Algoritma :
+for i < nilai.length
+	if nilai[i] mengandung angka 2
+		print nilai[i]

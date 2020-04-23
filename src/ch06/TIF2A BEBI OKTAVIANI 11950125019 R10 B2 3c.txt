@@ -1,0 +1,19 @@
+Deklarasi
+i : integer
+j : integer
+n : integer
+min : integer
+temp : integer
+A : Array[0…n-1] of integer
+
+Deskripsi:
+Begin
+for i ← 0 to n – 2 do
+ min ← i
+ for j ← i + 1 to n – 1 do
+  if A[j] < A[min]
+   min ← j
+  endif
+ endfor
+ swap A[i] and A[min]
+endfor

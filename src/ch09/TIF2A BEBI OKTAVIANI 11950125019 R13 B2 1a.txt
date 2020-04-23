@@ -1,0 +1,20 @@
+int n=120; //batas atas n dapat diganti dengan bilangan bulat lainnya
+boolean[] prima=new boolean[n+1];
+
+for(int i=0; i<=n; i++)
+	prima[i]=true;        //set seluruh array menjadi true
+prima[0]=prima[1]=false;     //0 dan 1 bukan bil. prima
+double akarN=Math.sqrt(n);      //akar kuadrat dari n
+
+//coret bilangan yang bukan prima
+for(int i=2; i<=akarN; i++) {
+	if (prima[i]) {
+	     for (int j=i*i; j<=n; j=j+i)
+                 prima[j]=false;
+	}
+}
+
+//tampilkan seluruh bilangan prima
+for(int i=0; i<n; i++) {
+	if (prima[i])
+		System.out.print(i+ "\t");

@@ -1,0 +1,25 @@
+if m < n, swap(m,n)
+while n does not equal 0
+   r = m mod n
+   m = n
+   n = r
+endwhile
+output m
+
+int euclid_gcd(int m, int n)
+{
+	int temp = 0;
+	if(m < n)
+	{
+		temp = m;
+		m = n;
+		n = temp;
+	}
+	while(n != 0)
+	{
+		temp = m % n;
+		m = n;
+		n = temp;
+	}
+	return m;
+}

@@ -1,0 +1,20 @@
+public class nilai_tertinggi_3variable {
+    public static void main(String[] args) {
+        int value1 = 80;
+        int value2 = 90;
+        int value3 = 60;
+        if(value1 > value2){
+            if (value1 > value3) {
+                System.out.println(value1);
+            }else{
+                System.out.println(value3);
+            }
+        }else{
+            if (value2 > value3) {
+                System.out.println(value2);
+            }else{
+                System.out.println(value3);
+            }
+        }
+    }
+}

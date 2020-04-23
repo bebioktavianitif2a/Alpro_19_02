@@ -1,0 +1,11 @@
+public class nilai_tertinggi_2variable {
+    public static void main(String[] args) {
+        int value1 = 80;
+        int value2 = 90;
+        if(value1 > value2){
+            System.out.println(value1);
+        }else{
+            System.out.println(value2);
+        }
+    }
+}

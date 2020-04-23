@@ -1,0 +1,22 @@
+BlockSort(array)
+       power_of_two = FloorPowerOfTwo(array.size)
+       scale = array.size/power_of_two // 1.0 = scale < 2.0
+      
+       // insertion sort 16–31 items at a time
+       for (merge = 0; merge < power_of_two; merge += 16)
+           start = merge * scale
+           end = start + 16 * scale
+           InsertionSort(array, [start, end))
+      
+       for (length = 16; length < power_of_two; length += length)
+           for (merge = 0; merge < power_of_two; merge += length * 2)
+               start = merge * scale
+               mid = (merge + length) * scale
+               end = (merge + length * 2) * scale
+              
+               if (array[end - 1] < array[start])
+                   // the two ranges are in reverse order, so a rotation is enough to merge them
+                   Rotate(array, mid - start, [start, end))
+               else if (array[mid - 1] > array[mid])
+                   Merge(array, A = [start, mid), B = [mid, end))
+               // else the ranges are already correctly ordered
